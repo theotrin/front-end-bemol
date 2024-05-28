@@ -19,12 +19,6 @@ export class AppComponent {
 
   todos:Task[] = [];
 
-  newTodo: string;
-
-
-  done(id: number) {
-    this.todos[id].completed = !this.todos[id].completed;
-  }
 
   remove(id: number) {
     this.todos = this.todos.filter((v, i) => i !== id);
@@ -57,12 +51,12 @@ export class AppComponent {
     }
   }
 
-  doneTask(id: number) {
-
+  markTaskDone(id:number) {
+    this.taskService.doneTask(id).subscribe(() => this.getTasks())
   }
 
-  getIdTask(id:number) {
-    this.taskService.doneTask(id).subscribe(() => this.getTasks())
+  deleteTask(id:number) {
+    this.taskService.deleteTask(id).subscribe(() => this.getTasks())
   }
 
 }

@@ -12,26 +12,30 @@
           [(ngModel)]="description"
           placeholder="Nome da tarefa"
         />
+
         <button
           class="btn btn-outline-secondary btn-primary"
           type="button"
           id="button-addon2"
           (click)="addNewTask()"
-        >
-          Adcionar Tarefa
-        </button>
+        > Adcionar Tarefa</button>
       </div>
       <br />
+
       <table class="table table-striped">
         <tbody>
-          <tr *ngFor="let task of tasks$ | async" >
+          <tr *ngFor="let task of tasks$ | async">
             <th scope="row">{{ task.id }}</th>
-            <td [ngClass]="{ done: task.completed }" (click)="getIdTask(task.id!)">{{ task.description }}</td>
 
-            <td class="done-button">X</td>
+            <td class="" [ngClass]="{ done: task.completed }" (click)="markTaskDone(task.id!)" >
+              {{ task.description }}
+            </td>
+
+            <td class="done-button" (click)="deleteTask(task.id!)">X</td>
           </tr>
         </tbody>
       </table>
+
     </div>
   </div>
 </div>

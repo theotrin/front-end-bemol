@@ -19,9 +19,11 @@ export class TaskServices {
     return this.httpClient.post<Task>(this.url + '/api/tasks', task)
   }
 
-
-
   doneTask(id: number) {
-    return this.httpClient.put<number>(`${this.url}/api/tasks/${id}/complete`, id)
+    return this.httpClient.put<number>(`${this.url}/api/tasks/${id}/complete`, id);
+  }
+
+  deleteTask(id:number) {
+    return this.httpClient.delete<number>(`${this.url}/api/tasks/${id}`)
   }
 }
