@@ -7,31 +7,28 @@
         <input
           type="text"
           class="form-control"
-          placeholder="Nome da tarefa"
           aria-label="Nome da tarefa"
           aria-describedby="button-addon2"
-          [(ngModel)]="newTodo"
+          [(ngModel)]="description"
+          placeholder="Nome da tarefa"
         />
         <button
           class="btn btn-outline-secondary btn-primary"
           type="button"
           id="button-addon2"
-          (click)="saveTodo()"
-        >Adcionar Tarefa</button>
+          (click)="addNewTask()"
+        >
+          Adcionar Tarefa
+        </button>
       </div>
-      <br>
+      <br />
       <table class="table table-striped">
         <tbody>
-          <tr *ngFor="let todo of todos;let i = index;">
-            <th scope="row">{{i+1}}</th>
-            <td
-            [ngClass]="{'done': todo.completed}"
-            (click)="done(i)"
-            >{{todo.name}}</td>
-            <td
-            class="done-button"
-            (click)="remove(i)"
-            >X</td>
+          <tr *ngFor="let task of tasks$ | async" >
+            <th scope="row">{{ task.id }}</th>
+            <td [ngClass]="{ done: task.completed }" (click)="getIdTask(task.id!)">{{ task.description }}</td>
+
+            <td class="done-button">X</td>
           </tr>
         </tbody>
       </table>
