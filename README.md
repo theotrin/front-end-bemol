@@ -1,27 +1,28 @@
-# FrontEndBemol
+Você vai precisar ter instalado no seu computador:
+- Angular CLI.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+## Setup do Front-end com Angular:
+![image](https://github.com/theotrin/apresentacao-desafio-bemol/assets/102327842/2012e865-271e-4fc1-803d-0ac79afb179a)
+- Abrindo o projeto na pasta raiz, basta somente colocar o código `ng serve` e pronto!
+- A aplicação deve subir na URL: `http://localhost:4200/`, basta acessar e ver o projeto que deve parecer com isso:
 
-## Development server
+![image](https://github.com/theotrin/apresentacao-desafio-bemol/assets/102327842/307a4bb3-e147-41fc-8d26-539477b812e0)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Como usar o projeto?
 
-## Code scaffolding
+Chegamos na parte mais fácil onde precisamos apenas clicar, então lá vai o guia: 
+- Entrando no projeto, você já deve ver as 3 tarefas que sempre subirão quando o projeto for reiniciado.
+- Clicando no nome da tarefa, ela deve ficar riscada indicando que foi concluída.
+- Apertando no X ao lado, a tarefa deve ser excluída.
+- As operações acontecem tanto no Front-end quanto no Back-end.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# 🚀 Diferenciais 🚀 feitos:
+## Implementação de testes unitários na API. 
+- Foram feitos testes unitários utilizando JUnit 5 e Mockito na API.
+## Organização de código.
+- Busquei organizar o código da maneira mais limpa e organizada possível, sendo fácil de refatorar e entender.
+## Responsividade
+- Utilizei Bootstrap, que cuida da organização no Front-end, então a aplicação está responsiva em dispositivos móveis também!
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Me chamo Theo Trindade e esse foi meu projeto!
+### Estou disponível e entusiasmado para falar sobre ambas as partes do projeto e explicar eventuais blocos de código. Obrigado :D.
